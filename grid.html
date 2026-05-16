@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .item{
+            border: 1px solid orangered;
+
+        }
+        .all_item{
+            display: grid;
+            /* grid-template-columns: 200px 200px; */
+            /* grid-template-columns: 200px 100px 200px; */
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-columns: repeat(2, 1fr);  */
+            /* grid-template-columns: repeat(2, 1fr) 2fr;  */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            grid-template-columns: 100px 200px 100px;
+            justify-content: space-around;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore Flex layout: 1D -> Flex is uni directional</h1>
+    <h1>Explore Grid layout: 2D -> Grid is 2 directional</h1>
+    <h3>Grid 1fr- 1fraction row</h2>
+    <section class="all_item">
+        <!-- .item{BOX-$}*20 -->
+         <div class="item">BOX-1</div>
+         <div class="item">BOX-2</div>
+         <div class="item">BOX-3</div>
+         <div class="item">BOX-4</div>
+         <div class="item">BOX-5</div>
+         <div class="item">BOX-6</div>
+         <div class="item">BOX-7</div>
+         <div class="item">BOX-8</div>
+         <div class="item">BOX-9</div>
+         <div class="item">BOX-10</div>
+         <div class="item">BOX-11</div>
+         <div class="item">BOX-12</div>
+         <div class="item">BOX-13</div>
+         <div class="item">BOX-14</div>
+         <div class="item">BOX-15</div>
+         <div class="item">BOX-16</div>
+         <div class="item">BOX-17</div>
+         <div class="item">BOX-18</div>
+         <div class="item">BOX-19</div>
+         <div class="item">BOX-20</div>
+    </section>
+</body>
+</html>
