@@ -1,0 +1,81 @@
+================================================================
+          DIFFERENCE BETWEEN %, px, em, rem (CSS Units)
+================================================================
+
+----------------------------------------------------------------
+1. px — Pixels (Absolute)
+----------------------------------------------------------------
+  - A FIXED unit. 1px = 1 pixel on screen.
+  - Does NOT scale with user settings or parent elements.
+  - Best for: borders, shadows, fine details.
+
+  Example:
+    p { font-size: 16px; }  /* Always 16px, no matter what */
+
+----------------------------------------------------------------
+2. % — Percentage (Relative to Parent)
+----------------------------------------------------------------
+  - Relative to the PARENT ELEMENT'S value.
+  - Changes when the parent changes.
+  - Best for: widths, layouts, responsive containers.
+
+  Example:
+    .parent { width: 500px; }
+    .child  { width: 50%; }   /* = 250px (50% of parent) */
+
+----------------------------------------------------------------
+3. em — Relative to Parent Font Size
+----------------------------------------------------------------
+  - Relative to the NEAREST PARENT'S font-size.
+  - Can COMPOUND/CASCADE (nested elements multiply).
+  - Best for: padding, margin relative to text size.
+
+  Example:
+    .parent { font-size: 16px; }
+    .child  { font-size: 2em; }  /* = 32px (2 x 16px)        */
+    .grand  { font-size: 2em; }  /* = 64px (2 x 32px) compounds! */
+
+----------------------------------------------------------------
+4. rem — Relative to Root Font Size
+----------------------------------------------------------------
+  - Relative to the <html> (ROOT) element's font-size only.
+  - Does NOT compound — always consistent.
+  - Best for: font sizes, spacing across the whole page.
+
+  Example:
+    html  { font-size: 16px; }
+    .any  { font-size: 2rem; } /* Always 32px, anywhere on page */
+
+----------------------------------------------------------------
+5. QUICK COMPARISON TABLE
+----------------------------------------------------------------
+
+  Unit  | Relative To          | Compounds? | Best For
+  ------|----------------------|------------|---------------------
+  px    | Nothing (fixed)      | No         | Borders, shadows, icons
+  %     | Parent element       | Depends    | Widths, layouts
+  em    | Parent font-size     | YES        | Padding, margin
+  rem   | Root (html) font-size| NO         | Font sizes, global spacing
+
+----------------------------------------------------------------
+6. SIMPLE RULE OF THUMB
+----------------------------------------------------------------
+
+  Use Case              | Recommended Unit
+  ----------------------|-----------------
+  Font sizes            | rem
+  Padding / Margin      | em or rem
+  Layout widths         | %
+  Borders / Shadows     | px
+  Responsive design     | % + rem
+
+----------------------------------------------------------------
+7. BOTTOM LINE SUMMARY
+----------------------------------------------------------------
+
+  - px  : Use when you need exact, fixed sizes.
+  - %   : Use for flexible layouts relative to the parent.
+  - em  : Use when sizing should scale with the local text.
+  - rem : Use for consistent, root-based scaling across the page.
+
+================================================================
